@@ -1,8 +1,15 @@
 <?php
 
+/*
+ * This file is part of the nason/alibaba-purchase.
+ *
+ * (c) nason <mananxun99@gmail.com>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
+ */
 
 namespace Nason\AlibabaPurchase\Api\P4P;
-
 
 use Nason\AlibabaPurchase\Api\Api;
 
@@ -63,7 +70,9 @@ class SearchCybOfferApi extends Api
 
     /**
      * 经营模式; 1:生产加工,2:经销批发,3:招商代理,4:商业服务
+     *
      * @param $bizType
+     *
      * @return $this
      */
     public function bizType($bizType)
@@ -74,8 +83,10 @@ class SearchCybOfferApi extends Api
     }
 
     /**
-     * 买家保障,多个值用逗号分割;qtbh:7天包换;swtbh:15天包换
+     * 买家保障,多个值用逗号分割;qtbh:7天包换;swtbh:15天包换.
+     *
      * @param $value
+     *
      * @return $this
      */
     public function buyerProtection($value)
@@ -87,7 +98,9 @@ class SearchCybOfferApi extends Api
 
     /**
      * 所在地区- 省
+     *
      * @param $province
+     *
      * @return $this
      */
     public function province($province)
@@ -99,7 +112,9 @@ class SearchCybOfferApi extends Api
 
     /**
      * 所在地区- 市
+     *
      * @param $city
+     *
      * @return $this
      */
     public function city($city)
@@ -110,8 +125,10 @@ class SearchCybOfferApi extends Api
     }
 
     /**
-     * 发货时间;1:24小时发货;2:48小时发货;3:72小时发货
+     * 发货时间;1:24小时发货;2:48小时发货;3:72小时发货.
+     *
      * @param $type
+     *
      * @return $this
      */
     public function deliveryTimeType($type)
@@ -122,8 +139,10 @@ class SearchCybOfferApi extends Api
     }
 
     /**
-     * 是否倒序;正序: false;倒序:true
+     * 是否倒序;正序: false;倒序:true.
+     *
      * @param $isDesc
+     *
      * @return $this
      */
     public function descendOrder($isDesc)
@@ -135,8 +154,10 @@ class SearchCybOfferApi extends Api
     }
 
     /**
-     * 商品售卖类型筛选;枚举,多个值用分号分割;免费赊账:50000114
+     * 商品售卖类型筛选;枚举,多个值用分号分割;免费赊账:50000114.
+     *
      * @param $id
+     *
      * @return $this
      */
     public function holidayTagId($id)
@@ -147,8 +168,10 @@ class SearchCybOfferApi extends Api
     }
 
     /**
-     * 搜索关键词
+     * 搜索关键词.
+     *
      * @param $keyWords
+     *
      * @return $this
      */
     public function keyWords($keyWords)
@@ -159,8 +182,10 @@ class SearchCybOfferApi extends Api
     }
 
     /**
-     * 类目id
+     * 类目id.
+     *
      * @param $categoryId
+     *
      * @return $this
      */
     public function postCategoryId($categoryId)
@@ -171,8 +196,10 @@ class SearchCybOfferApi extends Api
     }
 
     /**
-     * 最低价
+     * 最低价.
+     *
      * @param $price
+     *
      * @return $this
      */
     public function priceStart($price)
@@ -183,8 +210,10 @@ class SearchCybOfferApi extends Api
     }
 
     /**
-     * 最高价
+     * 最高价.
+     *
      * @param $price
+     *
      * @return $this
      */
     public function priceEnd($price)
@@ -195,8 +224,10 @@ class SearchCybOfferApi extends Api
     }
 
     /**
-     * 价格类型;默认分销价;agent_price:分销价;
+     * 价格类型;默认分销价;agent_price:分销价;.
+     *
      * @param $filter
+     *
      * @return $this
      */
     public function priceFilterFields($filter)
@@ -207,8 +238,10 @@ class SearchCybOfferApi extends Api
     }
 
     /**
-     * 排序字段;normal:综合;
+     * 排序字段;normal:综合;.
+     *
      * @param $type
+     *
      * @return $this
      */
     public function sortType($type)
@@ -220,7 +253,9 @@ class SearchCybOfferApi extends Api
 
     /**
      * 1387842:渠道专享价商品
+     *
      * @param $tag
+     *
      * @return $this
      */
     public function offerTags($tag)
@@ -231,8 +266,10 @@ class SearchCybOfferApi extends Api
     }
 
     /**
-     * 商品id搜索，多个id用逗号分割
+     * 商品id搜索，多个id用逗号分割.
+     *
      * @param $offerIds
+     *
      * @return $this
      */
     public function offerIds($offerIds)

@@ -1,8 +1,15 @@
 <?php
 
+/*
+ * This file is part of the nason/alibaba-purchase.
+ *
+ * (c) nason <mananxun99@gmail.com>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
+ */
 
 namespace Nason\AlibabaPurchase\Api\Trade;
-
 
 use Nason\AlibabaPurchase\Api\Api;
 use Nason\AlibabaPurchase\Exceptions\InvalidArgumentException;
@@ -24,7 +31,7 @@ class createRefundApi extends Api
 
     protected $orderEntryCount = [
         'id' => 0,
-        'count' => 0
+        'count' => 0,
     ];
 
     public function getApiNS()

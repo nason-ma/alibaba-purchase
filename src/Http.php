@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the nason/gw_supply_chain.
+ * This file is part of the nason/alibaba-purchase.
  *
  * (c) nason <mananxun99@gmail.com>
  *
@@ -30,7 +30,7 @@ class Http
 
     public static function setGuzzleOption($key, $value)
     {
-        if ($value == '') {
+        if ('' == $value) {
             return;
         }
         self::$guzzleOptions[$key] = $value;

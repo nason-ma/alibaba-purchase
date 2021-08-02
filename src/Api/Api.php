@@ -1,8 +1,15 @@
 <?php
 
+/*
+ * This file is part of the nason/alibaba-purchase.
+ *
+ * (c) nason <mananxun99@gmail.com>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
+ */
 
 namespace Nason\AlibabaPurchase\Api;
-
 
 use Carbon\Carbon;
 use Nason\AlibabaPurchase\Http;
@@ -30,7 +37,7 @@ abstract class Api
     {
         $this->params = [
             '_aop_timestamp' => Carbon::now()->getTimestampMs(),
-            'access_token' => $this->accessToken
+            'access_token' => $this->accessToken,
         ];
     }
 
@@ -44,6 +51,7 @@ abstract class Api
             $this->secretKey,
             $params
         );
+
         return $params;
     }
 

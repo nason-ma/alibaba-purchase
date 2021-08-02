@@ -1,8 +1,15 @@
 <?php
 
+/*
+ * This file is part of the nason/alibaba-purchase.
+ *
+ * (c) nason <mananxun99@gmail.com>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
+ */
 
 namespace Nason\AlibabaPurchase\Api\Trade;
-
 
 use Nason\AlibabaPurchase\Api\Api;
 
@@ -46,7 +53,7 @@ class RefundListApi extends Api
     {
         if (!isset($this->options[$key]) ||
             '' == $value ||
-            (is_array($value) && count($value) == 0)
+            (is_array($value) && 0 == count($value))
         ) {
             return;
         }
