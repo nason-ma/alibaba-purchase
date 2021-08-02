@@ -1,8 +1,15 @@
 <?php
 
+/*
+ * This file is part of the nason/alibaba-purchase.
+ *
+ * (c) nason <mananxun99@gmail.com>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
+ */
 
 namespace Nason\AlibabaPurchase\Api\P4P;
-
 
 use Carbon\Carbon;
 use Nason\AlibabaPurchase\Api\Api;
@@ -56,7 +63,7 @@ class MediaUserApi extends Api
     public function setBehaviour($key, $value)
     {
         if (!isset($this->behaviour[$key]) ||
-            $value == '' ||
+            '' == $value ||
             is_array($value)
         ) {
             return;
