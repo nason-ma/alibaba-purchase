@@ -1,0 +1,24 @@
+{
+    "name": "nason\/alibaba-purchase",
+    "description": "Alibaba Purchase API SDK",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "nason-ma",
+            "email": "878826676@qq.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "~6.5",
+        "nesbot/carbon": "~2.12",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Nason\\AlibabaPurchase\\": "src"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    }
+}
