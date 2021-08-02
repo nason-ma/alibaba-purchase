@@ -2,6 +2,8 @@
 
 <p align="center"> Alibaba Purchase API SDK.</p>
 
+![StyleCI build status](https://github.styleci.io/repos/391899180/shield)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/nason-ma/alibaba-purchase)
 
 ## Installing
 
