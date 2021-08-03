@@ -45,7 +45,7 @@ function array_filter_merge(array $array1, array $array2)
 function timestamp_ms()
 {
     $time = Carbon::now()->setTimezone(Config::TIME_ZONE);
-    list($usec, $sec) = explode(" ", microtime());
+    list($usec, $sec) = explode(' ', microtime());
 
     return (int) sprintf('%.0f', $time->timestamp.($usec * 1000));
 }
