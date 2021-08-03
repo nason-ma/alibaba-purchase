@@ -9,6 +9,9 @@
  * with this source code in the file LICENSE.
  */
 
+use Carbon\Carbon;
+use Nason\AlibabaPurchase\Config;
+
 function bool2str($flag)
 {
     if ($flag) {
@@ -20,7 +23,7 @@ function bool2str($flag)
 
 function unixTime2JavaDate($time)
 {
-    $carbon = \Carbon\Carbon::createFromTimestamp($time, 'Asia/Shanghai');
+    $carbon = Carbon::createFromTimestamp($time, Config::TIME_ZONE);
 
     return $carbon->format('YmdHis000+0800');
 }
@@ -37,4 +40,11 @@ function array_filter_merge(array $array1, array $array2)
     }
 
     return array_filter($result);
+}
+
+function timestamp_ms()
+{
+    $time = Carbon::now()->setTimezone(Config::TIME_ZONE);
+
+    return (int)sprintf('%.0f', $time->timestamp . ($time->micro / 1000));
 }

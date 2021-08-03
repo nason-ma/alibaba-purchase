@@ -11,7 +11,6 @@
 
 namespace Nason\AlibabaPurchase\Api;
 
-use Carbon\Carbon;
 use Nason\AlibabaPurchase\Http;
 use Nason\AlibabaPurchase\Signature;
 
@@ -36,7 +35,7 @@ abstract class Api
     protected function initParams()
     {
         $this->params = [
-            '_aop_timestamp' => Carbon::now()->getTimestampMs(),
+            '_aop_timestamp' => timestamp_ms(),
             'access_token' => $this->accessToken,
         ];
     }

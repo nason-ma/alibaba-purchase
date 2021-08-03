@@ -11,7 +11,6 @@
 
 namespace Nason\AlibabaPurchase\Api\P4P;
 
-use Carbon\Carbon;
 use Nason\AlibabaPurchase\Api\Api;
 
 class MediaUserApi extends Api
@@ -38,7 +37,7 @@ class MediaUserApi extends Api
     public function saveMediaUserBehaviour($uuid, $actionType, $feedType, $actionTime = 0)
     {
         if (!$actionTime) {
-            $actionTime = Carbon::now()->getTimestampMs();
+            $actionTime = timestamp_ms();
         }
         $this->setBehaviour('uuid', $uuid);
         $this->setBehaviour('actionType', $actionType);

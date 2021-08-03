@@ -19,6 +19,8 @@ class Config
 
     const API_VERSION = 1;
 
+    const TIME_ZONE = 'Asia/Shanghai';
+
     public static function baseUri()
     {
         $uris = [
