@@ -29,24 +29,19 @@ abstract class Api
         $this->appKey = $appKey;
         $this->secretKey = $secretKey;
         $this->accessToken = $accessToken;
-        $this->initParams();
     }
 
     protected function initParams()
     {
         $this->params = [
+            '_aop_timestamp' => timestamp_ms(),
             'access_token' => $this->accessToken,
         ];
     }
 
-    protected function initTimestamp()
-    {
-        $this->params['_aop_timestamp'] = timestamp_ms();
-    }
-
     protected function fullParams($apiName, array $params)
     {
-        $this->initTimestamp();
+        $this->initParams();
         $params = array_merge($this->params, $params);
         $params['_aop_signature'] = Signature::signature(
             $this->getApiNS(),
