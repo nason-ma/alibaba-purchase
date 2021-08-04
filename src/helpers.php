@@ -47,5 +47,5 @@ function timestamp_ms()
     $time = Carbon::now()->setTimezone(Config::TIME_ZONE);
     list($usec, $sec) = explode(" ", microtime());
 
-    return (int) sprintf('%.0f', $time->timestamp.($usec * 1000));
+    return (int) sprintf('%.0f', ($time->timestamp + floatval($usec)) * 1000);
 }

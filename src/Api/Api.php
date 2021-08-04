@@ -35,13 +35,18 @@ abstract class Api
     protected function initParams()
     {
         $this->params = [
-            '_aop_timestamp' => timestamp_ms(),
             'access_token' => $this->accessToken,
         ];
     }
 
+    protected function initTimestamp()
+    {
+        $this->params['_aop_timestamp'] = timestamp_ms();
+    }
+
     protected function fullParams($apiName, array $params)
     {
+        $this->initTimestamp();
         $params = array_merge($this->params, $params);
         $params['_aop_signature'] = Signature::signature(
             $this->getApiNS(),
@@ -50,6 +55,7 @@ abstract class Api
             $this->secretKey,
             $params
         );
+        $this->params = $params;
 
         return $params;
     }
@@ -72,6 +78,11 @@ abstract class Api
             $apiName,
             $this->fullParams($apiName, $params)
         );
+    }
+
+    public function getParams()
+    {
+        return $this->params;
     }
 
     abstract public function getApiNS();
