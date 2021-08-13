@@ -14,7 +14,7 @@ namespace Nason\AlibabaPurchase\Api\Trade;
 use Nason\AlibabaPurchase\Api\Api;
 use Nason\AlibabaPurchase\Exceptions\InvalidArgumentException;
 
-class createRefundApi extends Api
+class CreateRefundApi extends Api
 {
     const API_NAME = 'alibaba.trade.createRefund';
 
